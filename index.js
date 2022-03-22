@@ -53,12 +53,17 @@ function getRandom(){
 }
  
 
+
 function getNewQuote(){
     const index=getRandom();
     complete();
+    if(!apiQuotes[index].author){
+        author.textContent="unknown";
+    }
+    else{
+        author.innerText=apiQuotes[index].author;
+    }
     quote.innerText=apiQuotes[index].text;
-    author.innerText=apiQuotes[index].author;
-
 }
 
 function tweetQuote(){
