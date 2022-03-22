@@ -22,7 +22,7 @@ loading();
         console.log(apiQuotes);
         const quote=apiQuotes[getRandom()];
         if(!quote.author){
-            author=textContent="unknown";
+            author.textContent="unknown";
         }
         else{
             author.textContent=quote.author;
